@@ -1,0 +1,12 @@
+<ion-view view-title="NgQrCode">
+  <ion-content>
+    <h1>NgQrCode</h1>
+    <Strong>Click the button to increase the number of encoded string to qrcode.</Strong><br>
+		<button class="button button-calm" ng-click="vm.addOneToQrCode()">
+			Change QR code
+		</button>
+		<p>Ecoded data is now:<Strong>{{vm.qrCodeString}}</Strong></p>
+		<br>
+		<qr text="vm.qrCodeString"></qr>
+  </ion-content>
+</ion-view>
