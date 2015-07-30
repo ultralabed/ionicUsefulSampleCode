@@ -1,11 +1,14 @@
-angular.module('app.ngDialogCtrl', [])
+angular.module('app.ngDialogCtrl', ['ngDialog'])
 
-.controller('NgDialogCtrl', function($scope, $ionicModal, $timeout) {
-
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('NgDialogCtrl', function($scope, ngDialog) {
+	var vm = this;
+	vm.openNgDialog = openNgDialog;
+	function openNgDialog() {
+		ngDialog.open({
+		  template: 'js/ngDialog/ngDialog.popup.html',
+		  controller: ['$scope', function() {
+		  	//Wrtie ngDialog controller code here.
+		  }]
+		})
+	}
 })
