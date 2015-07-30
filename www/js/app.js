@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'ngCordova', 'app.menuCtrl', 'app.oauthCtrl', 'app.ngDialogCtrl', 'app.ngQrCtrl'])
+angular.module('app', ['ionic', 'ngCordova', 'app.menuCtrl', 'app.oauthCtrl', 'app.ngDialogCtrl', 'app.ngQrCtrl', 'app.ngNotificationCtrl'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $cordovaLocalNotification) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,5 +19,10 @@ angular.module('app', ['ionic', 'ngCordova', 'app.menuCtrl', 'app.oauthCtrl', 'a
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    window.plugin.notification.local.hasPermission(function (granted) {
+      if(granted != true){
+        window.plugin.notification.local.promptForPermission();
+      }
+    })
   });
 });
