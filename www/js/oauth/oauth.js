@@ -1,7 +1,7 @@
 angular.module('app.oauthCtrl', [])
 
 .controller('OauthCtrl', function($scope, $cordovaOauth, $http) {
-	var CLIENT_ID = '457677655458-nnhciq98ccfnfu9r0llr4lo8i4uee785.apps.googleusercontent.com';
+	var CLIENT_ID = '240304041143-q7cfa9a17kktq9uo0g4ai90apss3qkbl.apps.googleusercontent.com';
 	var GOOGLE_AUTH_USERINFO_EMAIL = 'https://www.googleapis.com/auth/userinfo.email';
 	var GOOGLE_GET_USERINFO = 'https://www.googleapis.com/oauth2/v1/userinfo?access_token=' ;
 	var vm = this;
