@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.menuCtrl', 'app.oauthCtrl'])
+angular.module('app', ['ionic', 'ngCordova', 'app.menuCtrl', 'app.oauthCtrl'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

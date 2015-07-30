@@ -1,5 +1,22 @@
 <ion-view view-title="Oauth">
   <ion-content>
     <h1>Oauth</h1>
+		<button class="button button-block button-calm" ng-click="vm.googleLogin()">
+		{{vm.googleLoginTitle}}
+		</button>
+		<p>
+			<Strong>Google Login information.</Strong><br>
+			Token: {{vm.token}}<br>
+			Token Type: {{vm.tokenType}}<br>
+			Expire Time: {{vm.expiresIn}}<br>
+			Error Code: {{vm.errorCode}}<br>
+			<br>
+<!--	Root Token: {{vm.rootToken}}<br>
+			User Info: {{vm.userInfo}} -->
+			<Strong>Example of get userInfo after success login.</Strong><br>
+			User Id: {{vm.userInfo.data.id}}<br>
+			User Name: {{vm.userInfo.data.name}}<br>
+			User Email: {{vm.userInfo.data.email}}<br>
+		</p>
   </ion-content>
 </ion-view>

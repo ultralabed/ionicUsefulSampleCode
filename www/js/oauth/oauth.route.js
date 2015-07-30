@@ -6,7 +6,8 @@ angular.module('app.oauthCtrl')
     url: '/oauth',
     views: {
       'menuContent': {
-        templateUrl: 'js/oauth/oauth.html'
+        templateUrl: 'js/oauth/oauth.html',
+        controller: 'OauthCtrl as vm'
       }
     }
   });
