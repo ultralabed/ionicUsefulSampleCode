@@ -29,12 +29,12 @@ angular.module('app.oauthCtrl', [])
 	    });
 	}
 	function getUserEmail() {
-		$http.get(GOOGLE_GET_USERINFO+ vm.token)
+		$http.get(GOOGLE_GET_USERINFO + vm.token)
 		  .then(function(response) {
 		  	vm.userInfo = response;
 		  },
 		  function(error) {
 	  		vm.errorCode = "Error is : " + JSON.stringify(error);
 		  })
-		}
+	}
 })

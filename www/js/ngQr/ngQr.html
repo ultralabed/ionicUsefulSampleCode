@@ -1,7 +1,11 @@
 <ion-view view-title="NgQrCode">
   <ion-content>
     <h1>NgQrCode</h1>
-    <Strong>Click the button to increase the number of encoded string to qrcode.</Strong><br>
+    <Strong>Click the "	Scan Qr Code " button to scan qrcode and show data in alert box.</Strong><br>
+    <button class="button button-calm" ng-click="vm.scanQrCode()">
+    	Scan Qr Code
+    </button><br>
+    <Strong>Click the "	Change QR code " button to increase the number of encoded string to qrcode.</Strong><br>
 		<button class="button button-calm" ng-click="vm.addOneToQrCode()">
 			Change QR code
 		</button>
