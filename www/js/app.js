@@ -11,7 +11,8 @@ angular.module('app', ['ionic',
   'app.ngDialogCtrl',
   'app.ngQrCtrl',
   'app.ngNotificationCtrl',
-  'app.ngStorageCtrl'])
+  'app.ngStorageCtrl',
+  'app.ngVibrateCtrl'])
 
 .run(function($ionicPlatform, $cordovaLocalNotification) {
   $ionicPlatform.ready(function() {
